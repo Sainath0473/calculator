@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+<a href="/profile/new">Create New Profile</a>
+{{#if profiles.length}}
+  <h2>Profiles</h2>
+  <ul>
+    {{#each profiles}}
+      <li>
+        <h3>{{name}}, {{age}}</h3>
+        {{#if image}}
+          <img src="{{image}}" alt="{{name}}'s profile picture" style="max-width: 200px;">
+        {{/if}}
+        <p>Interests: {{interests}}</p>
+        <p>{{bio}}</p>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No profiles yet.</p>
+{{/if}}
